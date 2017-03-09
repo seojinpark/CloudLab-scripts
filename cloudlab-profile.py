@@ -41,6 +41,8 @@ for name in node_names:
         # Ask for a 256GB file system mounted at /shome on rcnfs
         bs = node.Blockstore("bs", "/shome")
         bs.size = "200GB"
+    bs2 = node.Blockstore("bs2", "/localdrive")
+    bs2.size = "30GB"
 
     node.hardware_type = params.type
     node.disk_image = urn.Image(cloudlab.Utah,"emulab-ops:%s" % params.image)
